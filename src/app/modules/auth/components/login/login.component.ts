@@ -35,6 +35,7 @@ export class LoginComponent implements OnInit {
     this.authService.login(LOGIN).subscribe(data => {
       if(data.status === 'ok'){
         sessionStorage.setItem('token',data.result.token);
+        this.authService.token = data.result.token;
         this.router.navigate(['dashboard']);
       }else{
         this.errorStatus = true;
