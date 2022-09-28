@@ -1,0 +1,50 @@
+
+ body{
+    /*background-image: radial-gradient( circle farthest-corner at 14.2% 27.5%,  rgba(104,199,255,1) 0%, rgba(181,126,255,1) 90% );*/
+    background-color: aqua;
+ }
+
+
+.form-login{
+    width: 300px;
+    background-color: white;
+    padding: 10px;
+    margin: auto;
+    margin-top: 50px;
+    border: 1px solid rgba(88, 14, 172,0.5);
+    border-radius: 10px;
+    display: block;
+    text-align: center;
+    transition: 0.5s;
+}
+
+.form-login input{
+    display: block;
+    width: 90%;
+    padding: 5px;
+    margin: auto;
+    margin-bottom: 10px;
+    font-size: 20px;
+    border: 1px solid rgba(0, 0, 85, 0.603);
+    border-radius: 5px;
+    color: #636b6f;;
+    outline: none;
+    
+}
+
+.btn-login{
+    font-size: 18px;
+    padding: 7px;
+    border-color: aqua;
+    border-radius: 5px;
+}
+
+.btn-login:hover{
+    color: white;
+    background-color: aqua;
+    transition: 0.3s;
+}
+
+.invalid-feedback{
+    color: rgba(220, 20, 60, 0.774);
+}

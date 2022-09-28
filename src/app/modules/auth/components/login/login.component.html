@@ -1,0 +1,22 @@
+<div class="form-login">
+    <h1>Citas Medicas App</h1>
+    <div class="logo">
+        <img src="https://play-lh.googleusercontent.com/fzcZF2PPYWQDCilOJLgqO6OFtJaN92DXOWuueS_ta5PCvzRSPVwnxiCnWCWqYqrmN5s=w240-h480-rw" alt="logo">
+    </div>
+    <form [formGroup]="loginForm" (ngSubmit)="loginForm.valid && onSubmit()" #formLogin="ngForm" novalidate>
+
+        <input type="email" placeholder="Correo:" id="email" name="email" formControlName="email">
+        <div class="invalid-feedback" *ngIf="loginForm.get('email')?.invalid && formLogin.submitted">El campo es requerido</div>
+
+        <input type="password" placeholder="Contraseña:" name="password" formControlName="password">
+        <div class="invalid-feedback" *ngIf="loginForm.get('password')?.invalid && formLogin.submitted">El campo es requerido</div>
+
+        <button type="submit" class="btn-login" [disabled]="loginForm.invalid && loginForm.dirty">
+            enviar
+        </button>
+    </form>
+
+     <div *ngIf="errorStatus" class="invalid-feedback">
+        {{ errorMsg }}
+    </div> 
+</div>

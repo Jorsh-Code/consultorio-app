@@ -1,0 +1,28 @@
+<app-header></app-header>
+
+<button class="btn-table" (click)="createPatient()">Nuevo paciente</button>
+<table id="patients">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>NOMBRE</th>
+            <th>DNI</th>
+            <th>TELEFONO</th>
+            <th>CORREO</th>
+            <th></th>
+          </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let patient of patients">
+            <td>{{ patient.PacienteId }}</td>
+            <td>{{ patient.Nombre }}</td>
+            <td>{{ patient.DNI }}</td>
+            <td>{{ patient.Telefono }}</td>
+            <td>{{ patient.Correo }}</td>
+            <td><button class="btn-table" style="margin: 0;" (click)="editPatient(patient.PacienteId)">editar</button></td>
+        </tr>
+    </tbody>
+  </table>
+  <button class="btn-table" style="float:right;" (click)="nextPage()">Siguiente >></button>
+  <button class="btn-table" style="float:right;" (click)="returnPage()"><< Atras</button>
+  
